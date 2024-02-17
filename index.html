@@ -8,11 +8,74 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1 class="text-7xl">Hello</h1>
-    <section class="bg-[url('images/banner.png')] min-h-screen w-full bg-no-repeat">
-
+<body class="max-w-[1171px] mx-auto">
+    <nav>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+              </div>
+              <a class="text-4xl font-bold">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-lg">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn text-xl text-green-600">Bus <img src="images/bus-icon.png" alt="bus-icon"></a>
+              
+            </div>
+          </div>
+    </nav>
+    <section class="bg-[url('images/banner.png')] h-[550px] bg-contain bg-no-repeat bg-top">
+        <h1 class="text-2xl lg:text-6xl text-white text-center pt-16">End-to-End Travel with<br><span class="text-green-600">P Paribahan</span></h1>
+        <p class="text-center text-white pt-8">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        <div class="max-w-full flex flex-col pt-8 items-center">
+            <button class="btn bg-green-600 border-green-600 text-xl">Buy Tickets</button>
+        </div>
+        <div class="flex flex-col items-center lg:flex-row gap-6 lg:justify-center">
+            <div class="w-[308px] h-[134px] border-b-2 border-green-600 bg-white flex flex-row gap-4 items-center pl-8 rounded-xl relative bottom-[-140px]">
+                <div>
+                    <img src="images/people.png" alt="people">
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="text-4xl font-bold">500K+</h3>
+                    <p class="text-lg font-normal text-[#03071299]">Registered users</p>
+                </div>
+            </div>
+            <div class="w-[308px] h-[134px] border-b-2 border-green-600 bg-white flex flex-row gap-4 items-center pl-8 rounded-xl relative bottom-[-140px]">
+                <div>
+                    <img src="images/ticket-cupon.png" alt="people">
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="text-4xl font-bold">1.7 lacks</h3>
+                    <p class="text-lg font-normal text-[#03071299]">Tickets sold</p>
+                </div>
+            </div>
+            <div class="w-[308px] h-[134px] border-b-2 border-green-600 bg-white flex flex-row gap-4 items-center pl-8 rounded-xl relative bottom-[-140px]">
+                <div>
+                    <img src="images/stoppage.png" alt="people">
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="text-4xl font-bold">80K+</h3>
+                    <p class="text-lg font-normal text-[#03071299]">Rental partners</p>
+                </div>
+            </div>
+        </div>
     </section>
+
     
     <script src="js/script.js"></script>
 </body>
