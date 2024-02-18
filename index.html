@@ -7,9 +7,15 @@
     <link rel="shortcut icon" href="images/bus-logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            font-family: Raleway !important;
+        }
+    </style>
 </head>
-<body class="max-w-[1171px] mx-auto">
-    <nav>
+<body>
+    <nav class="max-w-[1171px] mx-auto">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
@@ -39,7 +45,7 @@
             </div>
           </div>
     </nav>
-    <section class="bg-[url('images/banner.png')] h-[550px] bg-contain bg-no-repeat bg-top">
+    <section class="bg-[url('images/banner.png')] h-[550px] bg-contain bg-no-repeat bg-top max-w-[1171px] mx-auto">
         <h1 class="text-2xl lg:text-6xl text-white text-center pt-16">End-to-End Travel with<br><span class="text-green-600">P Paribahan</span></h1>
         <p class="text-center text-white pt-8">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
         <div class="max-w-full flex flex-col pt-8 items-center">
@@ -78,11 +84,11 @@
     
     <!-- offer section -->
     
-    <section class="mt-72 lg:mt-40">
+    <section class="mt-72 lg:mt-40 max-w-[1171px] mx-auto">
         <h1 class="text-4xl text-center font-bold mb-10">Best offers for you</h1>
-        <div class="flex flex-col lg:flex-row justify-between">
+        <div class="flex flex-col gap-1 lg:flex-row justify-between">
             <div class="flex w-[560px] h-[220px] bg-[#FFBF0F]  rounded-3xl">
-                <div class="flex-1 p-10">
+                <div class="flex-1 p-8">
                     <h1 class="text-4xl font-extrabold pb-4">15% OFF</h1>
                     <p class="text-xl font-semibold pb-4">on your next purchase</p>
                     <p class="text-lg font-medium pb-4">use by January 2024</p>
@@ -96,7 +102,7 @@
                 </div>
             </div>
             <div class="flex w-[560px] h-[220px] bg-[#F78C9C]  rounded-3xl">
-                <div class="py-10 px-8 flex-1">
+                <div class="py-10 px-6">
                     <h1 class="text-3xl font-extrabold pb-4">20% OFF</h1>
                     <p class="text-lg font-semibold pb-4">on your next purchase</p>
                     <p class="text-lg font-medium pb-4">use by January 2024</p>
@@ -104,7 +110,7 @@
                 <div>
                     <img src="images/cupon-devider.png" alt="divide">
                 </div>
-                <div class="flex flex-col justify-center px-12">
+                <div class="flex flex-col justify-center px-8">
                     <h1 class="text-4xl font-bold pb-2">Couple 20</h1>
                     <p class="text-xl font-medium">Coupon Code</p>
                 </div>
@@ -120,9 +126,99 @@
     <section class="bg-[#F7F8F8] border-t-2 rounded-t-3xl border-green-600 mt-36 pt-32 text-center">
         <h1 class="text-4xl font-bold pb-4">P.H Paribahan</h1>
         <p class="text-lg font-normal text-[#03071299] pb-12">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
-    </section>
 
-    
+        <div class="flex max-w-[1170px] h-[418px] bg-white border-2 rounded-3xl gap-5 p-4 max-w-[1171px] mx-auto">
+            <div class="flex flex-col flex-1">
+                <div class="flex justify-between flex-1 gap-4 p-8">
+                    <div class="flex gap-2">
+                        <div>
+                            <img src="images/bus-logo.png" alt="bus">
+                        </div>
+                        <div class="text-left">
+                            <h4 class="text-3xl font-bold">Greenline Paribahan</h4>
+                            <p class="text-lg">Coach-009-WEB ! AC_Business</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 btn bg-green-200">
+                        <div><img src="images/seat-green.png" alt="seat"></div>
+                        <div>
+                            <p class="text-green-600"><span id="remaining-seat">40</span> Seats left</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-8">
+                    <table class="table-auto w-full h-[258px] bg-[#F7F8F8] rounded-3xl">
+                        <tbody>
+                            <tr class="border-b-2 border-dashed border-slate-400">
+                                <td class="text-left text-[#03071299]">Route</td>
+                                <td></td>
+                                <td class="text-right">Dhaka-Sylhet</td>
+                            </tr>
+                            <tr class="border-b-2 border-dashed border-slate-400">
+                                <td class="text-left text-[#03071299]">Departure Time</td>
+                                <td></td>
+                                <td class="text-right">9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left"><button class="btn">Boarding Point - Laxmipur</button></td>
+                                <td><button class="btn">Dropping Point - Bogura</button></td>
+                                <td class="text-right"><button class="btn">Est. Time - 11 Hour</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="border-dashed border-2 border-slate-400 rounded-xl">
+                <img src="images/info-devider.png" alt="divider">
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <div class="w-10"><img src="images/fare.png" alt=""></div>
+                <div>
+                    <h1 class="font-bold text-3xl">550 Taka</h1>
+                </div>
+                <div>
+                    <p>Per Seat</p>
+                </div>
+            </div>
+        </div>
+        <!-- ticket section purchase -->
+        <div class="max-w-[1171px] mx-auto mt-5 p-8 bg-white border-2 border-slate-200 rounded-3xl flex gap-4">
+            <div class="flex-1 border-dashed border-r-2 border-slate-500 p-4">
+                <div>
+                    <h4 class="text-left font-2xl font-semibold pb-5">Select Your Seat</h4>
+                </div>
+                <div class="flex justify-between">
+                    <div class="flex">
+                        <div><img src="images/seat-gray.png" alt=""></div>
+                        <p>available</p>
+                    </div>
+                    <div class="flex">
+                        <div><img src="images/seat-green-filled.png" alt=""></div>
+                        <p>Selected</p>
+                    </div>
+                </div>
+                <div class="btn float-right my-3">
+                    <svg width="26.000000" height="26.000000" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector" d="M1.91333 17.5922C2.5166 19.0481 3.40039 20.371 4.51465 21.4853C5.62891 22.5996 6.9519 23.4835 8.40771 24.0865C9.86377 24.6896 11.4241 25 13 25C14.5759 25 16.1362 24.6896 17.5923 24.0865C19.0481 23.4835 20.3711 22.5996 21.4854 21.4853C22.5996 20.371 23.4834 19.0481 24.0867 17.5922C24.6897 16.1363 25 14.5759 25 13C25 11.4241 24.6897 9.86371 24.0867 8.40781C23.4834 6.9519 22.5996 5.62903 21.4854 4.51471C20.3711 3.40042 19.0481 2.51651 17.5923 1.91345C16.1362 1.31039 14.5759 1 13 1C11.4241 1 9.86377 1.31039 8.40771 1.91345C6.9519 2.51651 5.62891 3.40042 4.51465 4.51471C3.40039 5.62903 2.5166 6.9519 1.91333 8.40781C1.3103 9.86371 1 11.4241 1 13C1 14.5759 1.3103 16.1363 1.91333 17.5922ZM11.1145 14.8856C11.6145 15.3857 12.2927 15.6667 13 15.6667C13.7073 15.6667 14.3855 15.3857 14.8855 14.8856C15.3857 14.3855 15.6667 13.7072 15.6667 13C15.6667 12.2928 15.3857 11.6145 14.8855 11.1144C14.3855 10.6143 13.7073 10.3333 13 10.3333C12.2927 10.3333 11.6145 10.6143 11.1145 11.1144C10.6143 11.6145 10.3333 12.2928 10.3333 13C10.3333 13.7072 10.6143 14.3855 11.1145 14.8856ZM13 15.6667L13 25M10.3333 13L1.33325 10.3333M15.6667 13L24.6667 10.3333" stroke="#030712" stroke-opacity="0.700000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                    
+                </div>
+            </div>
+            <!-- calculation section -->
+            <div class="flex-1">
+                <div>
+                    <h4 class="text-left font-2xl font-semibold pb-5">Select Your Seat</h4>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="js/script.js"></script>
 </body>
