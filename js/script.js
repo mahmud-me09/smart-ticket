@@ -81,8 +81,9 @@ document.getElementById('seatParent').addEventListener('click', (event)=>{
     }
 })
 document.getElementById("next-button").disabled = true
-document.getElementById("phone-number").addEventListener('keyup',(e) =>{
+document.getElementById("phone-number").addEventListener('input',(e) =>{
     if(count !== 0 && !isNaN(e.target.value)){
+        console.log(isNaN(e.target.value))
         document.getElementById("next-button").disabled = false
     }
 })
