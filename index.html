@@ -286,7 +286,7 @@
                         <table class="table-auto w-full h-[258px] bg-[#F7F8F8] rounded-3xl">
                             <thead class="border-b-2 border-dashed border-slate-200 " >
                                 <tr class='h-[50px]'>
-                                    <th>Seat <span id="seat-number"class= "bg-green-600 text-white">0</span></th>
+                                    <th>Seat <span id="seat-number" class= "bg-green-600 text-white">0</span></th>
                                     <th>Class</th>
                                     <th>Price</th>
                                 </tr>
@@ -303,10 +303,14 @@
                                 </tr>
                                 <tr>
                                     <td colspan="3">
-                                        <div class="mt-10 inline-flex">
-                                            <input type="text" placeholder="Type your coupon code" class="input w-full max-w-xs" disabled><button type="submit" class="btn bg-green-600 hover:text-black text-white">Apply</button>
+                                        <div id="coupon-section" class="mt-10 inline-flex">
+                                            <input id="coupon" type="text" placeholder="Type your coupon code" class="input w-full max-w-xs" disabled><button id="coupon-submit" type="submit" class="btn bg-green-600 hover:text-black text-white" disabled>Apply</button>
                                         </div>
                                     </td>
+                                </tr>
+                                <tr id="discount-row" class="hidden">
+                                    <td colspan="2">Discount</td>
+                                    <td id="discount">0</td>
                                 </tr>
                                 <tr>
                                     <td colspan="2" class="font-bold">Grand Total</td>
@@ -322,7 +326,7 @@
                     </div>
                     <div class="text-left mt-10">
                         <p class="mb-3 font-bold">Phone Number*</p>
-                        <input type="text" class="input input-bordered w-full" placeholder="Enter your phone number">
+                        <input id="phone-number" type="number" class="input input-bordered w-full" placeholder="Enter your phone number">
                     </div>
                     <div class="text-left mt-10">
                         <p class="mb-3 font-bold">Email-ID</p>

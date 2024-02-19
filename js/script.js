@@ -31,34 +31,56 @@ function createTableContent(seat) {
     seatSelect.appendChild(tr);
 }
 
+
+
 let count = 0;
 let total = 0;
 document.getElementById('seatParent').addEventListener('click', (event)=>{
     if(! document.getElementById(event.target.id).disabled == true && event.target.matches('button') && count<4){
         createTableContent(event.target.id)
         document.getElementById(event.target.id).disabled = true;
-        
         total += 550;
         count +=1;
         document.getElementById('total-price').innerText= total;
         document.getElementById('seat-number').innerText= count;
         document.getElementById('remaining-seat').innerText -= 1;
+        
+        if(count == 4){
+            document.getElementById('coupon').disabled = false;
+            document.getElementById('coupon').addEventListener('keyup',(event) =>{
+                if(event.target.value === 'NEW15'){
+                    document.getElementById('coupon-submit').disabled = false;
+                    document.getElementById('coupon-submit').addEventListener('click',() =>{
+                        document.getElementById('grand-total-price').innerText = total*.85;
+                        document.getElementById('coupon-section').classList.add('hidden');
+                        document.getElementById('discount-row').classList.remove('hidden');
+                        document.getElementById('discount').innerText = total*.15
+                    })
+                }
+                else if(event.target.value === 'Couple 20'){
+                    document.getElementById('coupon-submit').disabled = false;
+                    document.getElementById('coupon-submit').addEventListener('click',() =>{
+                        document.getElementById('grand-total-price').innerText = total*.80;
+                        document.getElementById('coupon-section').classList.add('hidden');
+                        document.getElementById('discount-row').classList.remove('hidden');
+                        document.getElementById('discount').innerText = total*.2
+                    })
+                }
+                else{
+                    document.getElementById('grand-total-price').innerText = total;
+            }
+            })
+            
+        }
+        else{
+            document.getElementById('grand-total-price').innerText = total;
+        }
         console.log(count,total)
     }
 })
-
-// seat Count
-
-
-// ticket selection
-
-// function selectTickets(id){
-//     let clickedSeat;
-//     document.getElementById(id).addEventListener('click',(event) =>{
-//         clickedSeat = event.target.innerText
-//         createTableContent(clickedSeat)
-//         console.log(clickedSeat)
-//     })
-
-// }
-// selectTickets('A1')
+document.getElementById("next-button").disabled = true
+document.getElementById("phone-number").addEventListener('keyup',(e) =>{
+    if(count !== 0 && !isNaN(e.target.value)){
+        document.getElementById("next-button").disabled = false
+    }
+})
