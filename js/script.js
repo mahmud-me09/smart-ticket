@@ -38,7 +38,7 @@ let total = 0;
 document.getElementById('seatParent').addEventListener('click', (event)=>{
     if(! document.getElementById(event.target.id).disabled == true && event.target.matches('button') && count<4){
         createTableContent(event.target.id);
-        console.log(document.getElementById(event.target.id).classList.add('disabled:bg-green-600', 'disabled:text-white'))
+        document.getElementById(event.target.id).classList.add('disabled:bg-green-600', 'disabled:text-white')
         document.getElementById(event.target.id).disabled = true;
         total += 550;
         count +=1;
