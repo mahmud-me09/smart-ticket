@@ -16,8 +16,6 @@ document.getElementById('rollback').addEventListener('click', () =>{
 // create a tr with 3 td
 function createTableContent(seat) {
     const tr = document.createElement('tr');
-
-    
     const seatCell = document.createElement('td');
     seatCell.textContent = seat;
     const classCell = document.createElement('td');
@@ -32,12 +30,25 @@ function createTableContent(seat) {
     const seatSelect = document.getElementById('seat-select');
     seatSelect.appendChild(tr);
 }
+
+let count = 0;
+let total = 0;
 document.getElementById('seatParent').addEventListener('click', (event)=>{
-    console.log(event.target.id)
-    
-    createTableContent(event.target.id)
-    document.getElementById(event.target.id).disabled = true;
-})    
+    if(! document.getElementById(event.target.id).disabled == true && event.target.matches('button') && count<4){
+        createTableContent(event.target.id)
+        document.getElementById(event.target.id).disabled = true;
+        
+        total += 550;
+        count +=1;
+        document.getElementById('total-price').innerText= total;
+        document.getElementById('seat-number').innerText= count;
+        document.getElementById('remaining-seat').innerText -= 1;
+        console.log(count,total)
+    }
+})
+
+// seat Count
+
 
 // ticket selection
 
