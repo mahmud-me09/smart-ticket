@@ -31,13 +31,14 @@ function createTableContent(seat) {
     seatSelect.appendChild(tr);
 }
 
-
+// calculation section
 
 let count = 0;
 let total = 0;
 document.getElementById('seatParent').addEventListener('click', (event)=>{
     if(! document.getElementById(event.target.id).disabled == true && event.target.matches('button') && count<4){
-        createTableContent(event.target.id)
+        createTableContent(event.target.id);
+        console.log(document.getElementById(event.target.id).classList.add('disabled:bg-green-600', 'disabled:text-white'))
         document.getElementById(event.target.id).disabled = true;
         total += 550;
         count +=1;
@@ -68,6 +69,7 @@ document.getElementById('seatParent').addEventListener('click', (event)=>{
                 }
                 else{
                     document.getElementById('grand-total-price').innerText = total;
+                    document.getElementById('coupon-submit').disabled = true;
             }
             })
             
